@@ -1,10 +1,13 @@
 # Windows Driver pack for OnePlus 7T Pro based on [SurfaceDuo-Drivers](https://github.com/WOA-Project/SurfaceDuo-Drivers/)
 ## [Here](https://github.com/woa-msmnile/msmnile-Drivers) is the Full Driver Pack.
 
+<img align="right" src="https://user-images.githubusercontent.com/13377926/205713757-bc821e03-5292-4a6b-905d-15b2206d99e4.png" height="300">
+
 This repository contains driver binary files for OnePlus 7T Pro.
 All driver binary files form a board support package to be used on OnePlus 7T Pro devices to provide hardware support for the Windows operating system.
 
 These driver files are not perfect, typos may exist, feel free to file an issue on GitHub in case you found any.
+
 
 | Feature                | Notes                                                                                                                                         | Status         |
 |------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|----------------|
