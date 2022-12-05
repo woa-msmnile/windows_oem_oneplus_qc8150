@@ -14,14 +14,14 @@ These driver files are not perfect, typos may exist, feel free to file an issue 
 | Bluetooth              |                                                                                                                                               | ✅            |
 | WiFi                   |                                                                                                                                               | ✅            |
 | UFS                    |                                                                                                                                               | ✅            |
-| Touch                  | Currently using a temporary driver, will be replaced with a proper one later                                                                  | ✅            |
+| Touch                  | Currently using a temporary driver, will be replaced with a proper one later                                                                  | ⚠️            |
 | GPU                    |                                                                                                                                               | ✅            |
 | Battery                |                                                                                                                                               | ✅            |
 | Buttons                |                                                                                                                                               | ✅            |
 | Light Sensor           |                                                                                                                                               | ❌            |
 | Thermal Sensor         |                                                                                                                                               | ❌            |
 | Haptic                 |                                                                                                                                               | ❌            |
-| Cellular Data          | Only if you copy modemfs files using [this guide](https://github.com/WOA-Project/SurfaceDuo-Guides/blob/main/Status.md#important-information) | ✅            |
+| Cellular Data          | Only if you copy modemfs files using [this guide](https://github.com/WOA-Project/SurfaceDuo-Guides/blob/main/Status.md#important-information) | ⚠️            |
 | Charge                 |                                                                                                                                               | ✅            |
 
 ## Resources
@@ -38,7 +38,7 @@ Copyright (c) 2011-2020 Qualcomm Incorporated
 
 Copyright (c) 2019-2022 Microsoft Corporation
 
-This repository contains binary files sourced from Qualcomm Snapdragon 8cx laptops/tablets as well as the Surface Duo original android firmware. As some mistakes may exist, we cannot provide warranty of any kind. 
+This repository contains binary files sourced from Qualcomm Snapdragon 8cx laptops/tablets as well as the OnePlus 7T Pro original Android firmware. As some mistakes may exist, we cannot provide warranty of any kind. 
 
 - By installing this driver pack, you agree that any damage done to your phone or any loss of data is your entire responsibility and we cannot be taken responsible for data loss if it ever happens. We believe however this driver pack is safe to install. Try at your own risk!
 
