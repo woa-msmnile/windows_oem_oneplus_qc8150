@@ -18,16 +18,16 @@ CatalogFile.NTarm64 = MTPOEM.arm64.cat
 MTP_System32_CopyFiles     = 11 ; System32
 
 [SourceDisksFiles]
-DevIcon_SurfaceDuo.ico = 0,,
-OEMAvatar_SurfaceDuo.cab = 0,,
+DevIcon_hotdog.ico = 0,,
+OEMAvatar_hotdog.cab = 0,,
 
 [DefaultInstall.NTARM64]
 CopyFiles = MTP_System32_CopyFiles
 AddReg    = MTP_Registry
 
 [MTP_System32_CopyFiles]
-DevIcon_SurfaceDuo.ico
-OEMAvatar_SurfaceDuo.cab,,,0x00000800       ; COPYFLG_NODECOMP
+DevIcon_hotdog.ico
+OEMAvatar_hotdog.cab,,,0x00000800       ; COPYFLG_NODECOMP
 
 [MTP_System32_CopyFiles.Security]
 D:P(A;;GA;;;BA)(A;;GA;;;SY)(A;;GA;;;WD)
