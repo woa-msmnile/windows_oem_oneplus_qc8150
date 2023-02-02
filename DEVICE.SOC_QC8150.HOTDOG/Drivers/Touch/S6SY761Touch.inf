@@ -1,0 +1,79 @@
+;
+;
+;Copyright (c) Microsoft Corporation All rights Reserved
+;Copyright (C) Microsoft Corporation, All Rights Reserved.
+;
+;SPDX-Licence-Identifier: GPL-2.0
+;
+;Copyright (c) 2017  Samsung Electronics Co., Ltd.
+;Copyright (c) 2017  Andi Shyti <andi@etezian.org>
+;                    Andi Shyti <andi.shyti@samsung.com>
+;
+;Copyright (c) 2022 - 2023 Richard Gráčik - Morc
+;
+
+[Version]
+Signature="$WINDOWS NT$"
+Class=HIDClass
+ClassGuid={745A17A0-74D3-11D0-B6FE-00A0C90F57DA}
+Provider=%ProviderString%
+DriverVer = 02/02/2023,20.39.3.862
+CatalogFile=S6SY761Touch.cat
+PnpLockdown = 1
+
+[Manufacturer]
+%ManufacturerString%=Microsoft,NTARM64.6.1
+
+[Microsoft.NTARM64.6.1]
+%DeviceDesc%=S6SY761Touch, ACPI\SCSY0761
+
+[S6SY761Touch.NT]
+CopyFiles=KMDriverCopy
+
+[S6SY761Touch.NT.hw]
+AddReg=S6SY761Touch_AddReg
+
+[S6SY761Touch.NT.Services]
+AddService=S6SY761Touch,0x00000002,S6SY761Touch_Service_Inst
+
+
+[S6SY761Touch_AddReg]
+HKR,,"UpperFilters",    %REG_MULTI_SZ%, mshidkmdf
+HKR,,"MultiportDevice", %REG_DWORD%,    0
+HKR,,"XRevert",0x00010001,0
+HKR,,"YRevert",0x00010001,0
+HKR,,"XYExchange",0x00010001,0
+HKR,,"XMin",0x00010001,0
+HKR,,"XMax",0x00010001,1440
+HKR,,"YMin",0x00010001,0
+HKR,,"YMax",0x00010001,3120
+
+[S6SY761Touch_Service_Inst]
+DisplayName    = %ServiceDesc%
+ServiceType    = 1
+StartType      = 3
+ErrorControl   = 1
+ServiceBinary  = %12%\S6SY761Touch.sys
+
+[KMDriverCopy]
+S6SY761Touch.sys
+
+[SourceDisksNames]
+1=%DiskDesc%,,,
+
+[SourceDisksFiles]
+S6SY761Touch.sys=1
+
+[DestinationDirs]
+KMDriverCopy=12
+
+;---------------------------------------------------------------;
+
+[Strings]
+ProviderString     = "Morc - Richard Gráčik"
+ManufacturerString = "Samsung Electronics Co."
+DeviceDesc         = "Samsung SEC-S6SY761 Touchscreen Controller Device"
+ServiceDesc        = "Samsung SEC-S6SY761 Touchscreen Controller Service"
+DiskDesc           = "Samsung SEC-S6SY761 Touchscreen Controller Installation Disk"
+REG_MULTI_SZ            = 0x00010000
+REG_DWORD               = 0x00010001
