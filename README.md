@@ -8,21 +8,7 @@ All driver binary files form a board support package to be used on OnePlus 7T Pr
 
 These driver files are not perfect, typos may exist, feel free to file an issue on GitHub in case you found any.
 
-
-| Feature                | Notes                                                                                                                                         | Status         |
-|------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|----------------|
-| Bluetooth              |                                                                                                                                               | ✅            |
-| WiFi                   |                                                                                                                                               | ✅            |
-| UFS                    |                                                                                                                                               | ✅            |
-| Touch                  | Currently using a temporary driver, will be replaced with a proper one later                                                                  | ⚠️            |
-| GPU                    |                                                                                                                                               | ✅            |
-| Battery                |                                                                                                                                               | ✅            |
-| Buttons                |                                                                                                                                               | ✅            |
-| Light Sensor           |                                                                                                                                               | ❌            |
-| Thermal Sensor         |                                                                                                                                               | ❌            |
-| Haptic                 |                                                                                                                                               | ❌            |
-| Cellular Data          | Only if you copy modemfs files using [this guide](https://github.com/WOA-Project/SurfaceDuo-Guides/blob/main/Status.md#important-information) | ⚠️            |
-| Charge                 |                                                                                                                                               | ✅            |
+**Feature status available [here](https://renegade-project.tech/en/state#supported-device-features-on-windows)**
 
 ## Resources
 
@@ -30,9 +16,9 @@ These driver files are not perfect, typos may exist, feel free to file an issue 
 
 **Below notice must be present in all redistributed portions of this software**
 
-Copyright (c) 2022-2022 WOA-msmnile
+Copyright (c) 2022-2023 WOA-msmnile
 
-Copyright (c) 2017-2022 WOA-Project
+Copyright (c) 2017-2023 WOA-Project
 
 Copyright (c) 2011-2020 Qualcomm Incorporated
 
