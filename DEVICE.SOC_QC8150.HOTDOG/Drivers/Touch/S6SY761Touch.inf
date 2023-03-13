@@ -9,7 +9,7 @@
 ;Copyright (c) 2017  Andi Shyti <andi@etezian.org>
 ;                    Andi Shyti <andi.shyti@samsung.com>
 ;
-;Copyright (c) 2022 - 2023 Richard Gráčik - Morc
+;Copyright (c) 2022 - 2023  Morc - Richard Gráčik
 ;
 
 [Version]
@@ -17,7 +17,7 @@ Signature="$WINDOWS NT$"
 Class=HIDClass
 ClassGuid={745A17A0-74D3-11D0-B6FE-00A0C90F57DA}
 Provider=%ProviderString%
-DriverVer = 02/02/2023,20.39.3.862
+DriverVer = 03/13/2023,23.34.46.150
 CatalogFile=S6SY761Touch.cat
 PnpLockdown = 1
 
