@@ -1,5 +1,5 @@
 ;
-; SurfaceOemPanel.inf
+; OneplusOemPanel.inf
 ;
 
 [Version]
@@ -8,46 +8,46 @@ Provider    = %ManufacturerName%
 ClassGuid   = {4d36e97d-e325-11ce-bfc1-08002be10318}
 Class       = System
 DriverVer = 11/27/2022,19.29.7.776
-CatalogFile = SurfaceOemPanel.cat
+CatalogFile = oneplusoempanel.cat
 PnpLockdown = 1
 
 [Manufacturer]
-%ManufacturerName% = Surface, NTARM64
+%ManufacturerName% = Oneplus, NTARM64
 
-[Surface.NTARM64]
-%DeviceName% = SurfaceOemPanel, ACPI\MSHW1004
+[Oneplus.NTARM64]
+%DeviceName% = OneplusOemPanel, ACPI\OPOP0007
 
 [SourceDisksNames]
 1 = %DiskName%,,,""
 
 [SourceDisksFiles]
-SurfaceOemPanel.sys  = 1
+oneplusoempanel.sys  = 1
 
 [DestinationDirs]
 OEMCopyFiles = 13
 
-[SurfaceOemPanel.NT]
+[OneplusOemPanel.NT]
 CopyFiles = OEMCopyFiles
 
 [OEMCopyFiles]
-SurfaceOemPanel.sys
+OneplusOemPanel.sys
 
-[SurfaceOemPanel.NT.Services]
-AddService = SurfaceOemPanel, %SPSVCINST_ASSOCSERVICE%, SurfaceOemPanel_Service_Inst
+[OneplusOemPanel.NT.Services]
+AddService = OneplusOemPanel, %SPSVCINST_ASSOCSERVICE%, OneplusOemPanel_Service_Inst
 
-[SurfaceOemPanel_Service_Inst]
+[OneplusOemPanel_Service_Inst]
 DisplayName    = %SvcDesc%
 ServiceType    = %SERVICE_KERNEL_DRIVER%
 StartType      = %SERVICE_DEMAND_START%
 ErrorControl   = %SERVICE_ERROR_NORMAL%
-ServiceBinary  = %13%\SurfaceOemPanel.sys
+ServiceBinary  = %13%\OneplusOemPanel.sys
 LoadOrderGroup = Extended Base
 
 [Strings]
-ManufacturerName = "Surface"
-DiskName         = "Surface OEM Panel Installation Disk"
-DeviceName       = "Surface OEM Panel Device"
-SvcDesc          = "Surface OEM Panel Device"
+ManufacturerName = "Oneplus"
+DiskName         = "Oneplus OEM Panel Installation Disk"
+DeviceName       = "Oneplus OEM Panel Device"
+SvcDesc          = "Oneplus OEM Panel Device"
 
 SPSVCINST_ASSOCSERVICE = 0x00000002
 SERVICE_KERNEL_DRIVER  = 1
