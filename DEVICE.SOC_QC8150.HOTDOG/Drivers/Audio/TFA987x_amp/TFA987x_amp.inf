@@ -1,0 +1,81 @@
+;
+; TFA987x_amp.inf
+;
+
+[Version]
+Signature="$WINDOWS NT$"
+Class       = Media
+ClassGuid   = {4d36e96c-e325-11ce-bfc1-08002be10318}
+Provider=%ManufacturerName%
+CatalogFile=TFA987x_amp.cat
+DriverVer = 01/14/2024,15.30.9.569
+PnpLockdown=1
+
+[DestinationDirs]
+DefaultDestDir = 12
+TFA987x_amp_Device_CoInstaller_CopyFiles = 11
+
+[SourceDisksNames]
+1 = %DiskName%,,,""
+
+[SourceDisksFiles]
+TFA987x_amp.sys  = 1,,
+;
+
+
+;*****************************************
+; Install Section
+;*****************************************
+
+[Manufacturer]
+%ManufacturerName%=Standard,NTARM64
+
+[Standard.NTARM64]
+%TFA987x_amp.DeviceDesc%=TFA987x_amp_Device, ACPI\GTFA9874
+%TFA987x_amp.DeviceDesc%=TFA987x_amp_Device, ACPI\GTFA9872
+
+[TFA987x_amp_Device.NT]
+CopyFiles=Drivers_Dir
+
+[Drivers_Dir]
+TFA987x_amp.sys
+
+;-------------- Service installation
+[TFA987x_amp_Device.NT.Services]
+AddService = TFA987x_amp,%SPSVCINST_ASSOCSERVICE%, TFA987x_amp_Service_Inst
+
+; -------------- TFA987x_amp driver install sections
+[TFA987x_amp_Service_Inst]
+DisplayName    = %TFA987x_amp.SVCDESC%
+ServiceType    = 1               ; SERVICE_KERNEL_DRIVER
+StartType      = 3               ; SERVICE_DEMAND_START
+ErrorControl   = 1               ; SERVICE_ERROR_NORMAL
+ServiceBinary  = %12%\TFA987x_amp.sys
+
+;
+;--- TFA987x_amp_Device Coinstaller installation ------
+;
+
+[TFA987x_amp_Device.NT.CoInstallers]
+AddReg=TFA987x_amp_Device_CoInstaller_AddReg
+CopyFiles=TFA987x_amp_Device_CoInstaller_CopyFiles
+
+[TFA987x_amp_Device_CoInstaller_AddReg]
+;
+
+
+[TFA987x_amp_Device_CoInstaller_CopyFiles]
+;
+
+
+[TFA987x_amp_Device.NT.Wdf]
+KmdfService =  TFA987x_amp, TFA987x_amp_wdfsect
+[TFA987x_amp_wdfsect]
+KmdfLibraryVersion = 1.15
+
+[Strings]
+SPSVCINST_ASSOCSERVICE= 0x00000002
+ManufacturerName="WoA msmnile" ;TODO: Replace with your manufacturer name
+DiskName = "TFA987x_amp Installation Disk"
+TFA987x_amp.DeviceDesc = "TFA987x_amp Device"
+TFA987x_amp.SVCDESC = "TFA987x_amp Service"
