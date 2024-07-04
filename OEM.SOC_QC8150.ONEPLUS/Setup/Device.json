@@ -1,0 +1,22 @@
+{
+  "capabilities": {
+    "fwVersion": {
+      "name": "fwVersion",
+      "visibility": "Show",
+      "properties": {
+        "uefi": {
+          "intValue": 0
+        }
+      }
+    },
+    "supportView": {
+      "name": "supportView",
+      "visibility": "Show",
+      "properties": {
+        "Url": {
+          "stringValue": "http://service.oneplus.com"
+        }
+      }
+    }
+  }
+}
