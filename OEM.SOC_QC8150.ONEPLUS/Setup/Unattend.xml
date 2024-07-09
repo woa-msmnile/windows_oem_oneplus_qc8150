@@ -40,6 +40,7 @@
       <Themes>
         <ThemeName>OLED</ThemeName>
         <UWPAppsUseLightTheme>false</UWPAppsUseLightTheme>
+        <SystemUsesLightTheme>false</SystemUsesLightTheme>
       </Themes>
     </component>
     <component name="Microsoft-Windows-TabletPC-Platform-Input-Core" processorArchitecture="arm64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS">
