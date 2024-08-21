@@ -21,7 +21,7 @@ These driver files are not perfect, typos may exist, feel free to file an issue 
 | Battery                | Currently windows reports two batteries             | ⚠️            |
 | Buttons                |                                                     | ✅            |
 | Location               |                                                     | ✅            |
-| Cellular Data          | Need to dump modem every sim card change.           | ⚠️            |
+| Cellular Data          |                                                     | ✅            |
 | Charge                 |                                                     | ⚠️            |
 | 🛡️ TPM                 | Only supports Windows 11 22H2 and above.            | ⚠️            |
 | 🧭 Light Sensor       |                                                     | ❌            |
